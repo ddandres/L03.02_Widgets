@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<!-- A label (TextView) and different  text fields (EditText) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextFieldsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Label displaying some text in bigger size and coloured -->
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <!-- Label displaying a coloured icon and some text -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:drawableTint="@color/colorAccent"
+            android:drawableStart="@android:drawable/ic_dialog_alert"
+            android:text="@string/label_icon" />
+
+        <!-- Text field with no input constraints but with autocorrection -->
+        <EditText
+            android:id="@+id/etRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/regular"
+            android:importantForAutofill="no"
+            android:inputType="textAutoCorrect" />
+
+        <!-- Text field for passwords (hidden)
+          ~  Its content is automatically checked in TextFieldsActivity
+          -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword" />
+
+        <!-- Text field for dat and time -->
+        <EditText
+            android:id="@+id/etDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/datetime"
+            android:importantForAutofill="no"
+            android:inputType="datetime" />
+
+        <!-- Text field that supports multiple lines -->
+        <EditText
+            android:id="@+id/etMultiline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/multiline"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine" />
+
+    </LinearLayout>
+</ScrollView>

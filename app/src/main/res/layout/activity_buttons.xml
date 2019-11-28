@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- A regular button -->
+        <Button
+            android:id="@+id/bRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regular_button" />
+
+        <!-- ToggleButton with custom ON/OFF text -->
+        <ToggleButton
+            android:id="@+id/tbToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="@string/off"
+            android:textOn="@string/on" />
+
+        <!-- Checkbox that is checked by default -->
+        <CheckBox
+            android:id="@+id/cbCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/check" />
+
+        <!--
+          ~ Switch that is unchecked by default
+          ~ A message will display its state when it changes
+          -->
+        <Switch
+            android:id="@+id/sSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/switch_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+              ~ A button displaying just an image
+              ~ When clicked it will uncheck the selection for the RadioGroup
+              -->
+            <ImageButton
+                android:id="@+id/ibImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/save"
+                android:onClick="clearRadioGroup"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <!--
+              ~ RadioGroup groups together a number of RadioButtons,
+              ~ so only one of them is checked at any time
+              -->
+            <RadioGroup
+                android:id="@+id/rgGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:checkedButton="@id/rbRadio1">
+
+                <RadioButton
+                    android:id="@+id/rbRadio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio1" />
+
+                <RadioButton
+                    android:id="@+id/rbRadio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio2" />
+
+                <RadioButton
+                    android:id="@+id/rbRadio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio3" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
