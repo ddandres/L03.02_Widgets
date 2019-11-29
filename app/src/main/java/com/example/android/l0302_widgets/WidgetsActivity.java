@@ -21,6 +21,9 @@ public class WidgetsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_widgets);
 
+        // Set the title of the Activity
+        setTitle(R.string.widgets);
+
         final ProgressBar pbProgress = findViewById(R.id.pbIndefiniteProgress);
 
         final Switch sSwitch = findViewById(R.id.sSwitchProgress);

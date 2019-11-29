@@ -24,6 +24,9 @@ public class ButtonsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttons);
 
+        // Set the title of the Activity
+        setTitle(R.string.buttons);
+
         rgGroup = findViewById(R.id.rgGroup);
 
         sSwitch = findViewById(R.id.sSwitch);

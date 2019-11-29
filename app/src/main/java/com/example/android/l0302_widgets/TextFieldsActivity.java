@@ -21,6 +21,9 @@ public class TextFieldsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_fields);
 
+        // Set the title of the Activity
+        setTitle(R.string.text_string);
+
         // Get a reference to the text field for entering passwords
         final EditText etPassword = findViewById(R.id.etPassword);
         // Add a TextWatcher to react to any change in this TextView's text
