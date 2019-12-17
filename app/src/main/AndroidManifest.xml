@@ -3,7 +3,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.l0302_widgets">
+    package="labs.dadm.l0302_widgets">
 
     <application
         android:allowBackup="true"
@@ -12,12 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WidgetsActivity"></activity>
-        <activity android:name=".ButtonsActivity" />
+        <activity android:name="labs.dadm.l0302_widgets.WidgetsActivity" />
+        <activity android:name="labs.dadm.l0302_widgets.ButtonsActivity" />
         <activity
-            android:name=".TextFieldsActivity"
+            android:name="labs.dadm.l0302_widgets.TextFieldsActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".MainActivity">
+        <activity android:name="labs.dadm.l0302_widgets.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,9 +2,7 @@
  * Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package com.example.android.l0302_widgets;
-
-import androidx.appcompat.app.AppCompatActivity;
+package labs.dadm.l0302_widgets;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ButtonsActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class ButtonsActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Display a Toast informing about its check state
                 Toast.makeText(ButtonsActivity.this,
-                        getString(R.string.switch_message, isChecked?"":"un"),
+                        getString(R.string.switch_message, isChecked ? "" : "un"),
                         Toast.LENGTH_SHORT).show();
             }
         });

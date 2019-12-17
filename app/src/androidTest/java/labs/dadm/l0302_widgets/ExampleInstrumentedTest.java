@@ -1,4 +1,8 @@
-package com.example.android.l0302_widgets;
+/*
+ * Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+ */
+
+package labs.dadm.l0302_widgets;
 
 import android.content.Context;
 
@@ -22,6 +26,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.android.l0302_widgets", appContext.getPackageName());
+        assertEquals("com.example.l0302_widgets", appContext.getPackageName());
     }
 }
