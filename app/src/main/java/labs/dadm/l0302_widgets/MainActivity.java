@@ -24,19 +24,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void launchShowWidgetsActivity(View view) {
         Intent intent = null;
-        switch (view.getId()) {
+        final int clickedButton = view.getId();
+        if (clickedButton == R.id.bTextFields) {
             // Intent to start an Activity that displays a number of TextView and EditText
-            case R.id.bTextFields:
-                intent = new Intent(MainActivity.this, TextFieldsActivity.class);
-                break;
+            intent = new Intent(MainActivity.this, TextFieldsActivity.class);
+        } else if (clickedButton == R.id.bButtons) {
             // Intent to start an Activity that displays a number of Buttons
-            case R.id.bButtons:
-                intent = new Intent(MainActivity.this, ButtonsActivity.class);
-                break;
+            intent = new Intent(MainActivity.this, ButtonsActivity.class);
+        } else if (clickedButton == R.id.bWidgets) {
             // Intent to start an Activity that displays a number of Widgets
-            case R.id.bWidgets:
-                intent = new Intent(MainActivity.this, WidgetsActivity.class);
-                break;
+            intent = new Intent(MainActivity.this, WidgetsActivity.class);
         }
         if (intent != null) {
             startActivity(intent);

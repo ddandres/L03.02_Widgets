@@ -41,7 +41,7 @@
           ~ Switch that is unchecked by default
           ~ A message will display its state when it changes
           -->
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/sSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

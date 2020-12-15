@@ -6,18 +6,17 @@ package labs.dadm.l0302_widgets;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class ButtonsActivity extends AppCompatActivity {
 
     // Hold references to Views
     RadioGroup rgGroup;
-    Switch sSwitch;
+    SwitchCompat sSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +30,11 @@ public class ButtonsActivity extends AppCompatActivity {
 
         sSwitch = findViewById(R.id.sSwitch);
         // This callback will be activated whenever the check state of the Switch changes
-        sSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // Display a Toast informing about its check state
-                Toast.makeText(ButtonsActivity.this,
-                        getString(R.string.switch_message, isChecked ? "" : "un"),
-                        Toast.LENGTH_SHORT).show();
-            }
+        sSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            // Display a Toast informing about its check state
+            Toast.makeText(ButtonsActivity.this,
+                    getString(R.string.switch_message, isChecked ? "" : "un"),
+                    Toast.LENGTH_SHORT).show();
         });
     }
 

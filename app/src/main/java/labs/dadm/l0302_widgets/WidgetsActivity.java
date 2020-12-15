@@ -6,13 +6,12 @@ package labs.dadm.l0302_widgets;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class WidgetsActivity extends AppCompatActivity {
 
@@ -26,17 +25,14 @@ public class WidgetsActivity extends AppCompatActivity {
 
         final ProgressBar pbProgress = findViewById(R.id.pbIndefiniteProgress);
 
-        final Switch sSwitch = findViewById(R.id.sSwitchProgress);
+        final SwitchCompat sSwitch = findViewById(R.id.sSwitchProgress);
         // This callback will be activated whenever the check state of the Switch changes
-        sSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // The ProgressBar will be visible or not according to the check state of the Switch
-                if (isChecked) {
-                    pbProgress.setVisibility(View.VISIBLE);
-                } else
-                    pbProgress.setVisibility(View.INVISIBLE);
-            }
+        sSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            // The ProgressBar will be visible or not according to the check state of the Switch
+            if (isChecked) {
+                pbProgress.setVisibility(View.VISIBLE);
+            } else
+                pbProgress.setVisibility(View.INVISIBLE);
         });
 
         final SeekBar sbContinuous = findViewById(R.id.sbContinuous);
