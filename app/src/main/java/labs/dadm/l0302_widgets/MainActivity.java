@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     // This method wil be executed when any Button is clicked.
     // It will launch the corresponding Activity.
-    public void launchShowWidgetsActivity(int clickedButton) {
+    private void launchShowWidgetsActivity(int clickedButton) {
         Intent intent = null;
         if (clickedButton == R.id.bTextFields) {
             // Intent to start an Activity that displays a number of TextView and EditText
