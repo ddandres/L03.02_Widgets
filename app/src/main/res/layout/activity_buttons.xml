@@ -63,7 +63,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:contentDescription="@string/save"
-                android:onClick="clearRadioGroup"
                 app:srcCompat="@android:drawable/ic_delete" />
 
             <!--

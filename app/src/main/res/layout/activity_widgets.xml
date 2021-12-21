@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Switch that shows/hides the ndefinite ProgressBar -->
+            <!-- Switch that shows/hides the indefinite ProgressBar -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/sSwitchProgress"
                 android:layout_width="wrap_content"

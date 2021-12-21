@@ -17,7 +17,9 @@
         <activity
             android:name="labs.dadm.l0302_widgets.TextFieldsActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name="labs.dadm.l0302_widgets.MainActivity">
+        <activity
+            android:name="labs.dadm.l0302_widgets.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

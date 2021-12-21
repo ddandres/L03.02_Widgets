@@ -5,7 +5,6 @@
 package labs.dadm.l0302_widgets;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -16,7 +15,6 @@ public class ButtonsActivity extends AppCompatActivity {
 
     // Hold references to Views
     RadioGroup rgGroup;
-    SwitchCompat sSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +26,7 @@ public class ButtonsActivity extends AppCompatActivity {
 
         rgGroup = findViewById(R.id.rgGroup);
 
-        sSwitch = findViewById(R.id.sSwitch);
+        final SwitchCompat sSwitch = findViewById(R.id.sSwitch);
         // This callback will be activated whenever the check state of the Switch changes
         sSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             // Display a Toast informing about its check state
@@ -36,12 +34,9 @@ public class ButtonsActivity extends AppCompatActivity {
                     getString(R.string.switch_message, isChecked ? "" : "un"),
                     Toast.LENGTH_SHORT).show();
         });
-    }
 
-    /*
-        This method will uncheck all RadioButtons within the RadioGroup
-     */
-    public void clearRadioGroup(View view) {
-        rgGroup.clearCheck();
+        // Uncheck all RadioButtons within the RadioGroup
+        findViewById(R.id.ibImage).setOnClickListener(v -> rgGroup.clearCheck());
+
     }
 }

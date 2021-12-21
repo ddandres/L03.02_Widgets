@@ -16,15 +16,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final View.OnClickListener listener = v -> launchShowWidgetsActivity(v.getId());
+        findViewById(R.id.bTextFields).setOnClickListener(listener);
+        findViewById(R.id.bButtons).setOnClickListener(listener);
+        findViewById(R.id.bWidgets).setOnClickListener(listener);
     }
 
-    /*
-        This method wil be executed when any Button is clicked.
-        It will launch the corresponding Activity.
-     */
-    public void launchShowWidgetsActivity(View view) {
+    // This method wil be executed when any Button is clicked.
+    // It will launch the corresponding Activity.
+    public void launchShowWidgetsActivity(int clickedButton) {
         Intent intent = null;
-        final int clickedButton = view.getId();
         if (clickedButton == R.id.bTextFields) {
             // Intent to start an Activity that displays a number of TextView and EditText
             intent = new Intent(MainActivity.this, TextFieldsActivity.class);
